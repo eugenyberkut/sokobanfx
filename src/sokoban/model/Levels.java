@@ -6,6 +6,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.stream.Stream;
 import static java.util.stream.Collectors.*;
 
@@ -22,7 +23,7 @@ public class Levels {
     static {
         try {
             lines = Files.newBufferedReader(Paths.get("soko.txt")).lines().collect(toCollection(ArrayList<String>::new));
-            System.out.println("Ok");
+            Logger.getLogger(sokoban.model.Levels.class.getName()).log(java.util.logging.Level.INFO, "Ok");
         } catch (IOException e) {
             e.printStackTrace();
         }
