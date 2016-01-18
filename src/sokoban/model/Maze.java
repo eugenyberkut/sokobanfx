@@ -14,8 +14,6 @@ public class Maze {
     private List<GameObject> targets;
     private List<GameObject> boxes;
     private Man man;
-    private int sizeX;
-    private int sizeY;
 
     public Maze() {
         borders = new ArrayList<>();
@@ -41,11 +39,6 @@ public class Maze {
 
     public void setMan(Man man) {
         this.man = man;
-    }
-
-    public void setSizes(int sizeX, int sizeY) {
-        this.sizeX = sizeX;
-        this.sizeY = sizeY;
     }
 
     public void move(Direction dir) {

@@ -11,14 +11,12 @@ import static java.util.stream.Collectors.toCollection;
 
 /**
  * Created by Yevhen on 09.01.2016.
+ * Sokoban FX example
  */
 public class Levels {
     private static List<String> lines;
-    private static Level currentLevel;
+//    private static Level currentLevel;
 
-    public static List<String> getLines() {
-        return lines;
-    }
 
     static {
         try {
@@ -50,11 +48,7 @@ public class Levels {
                 data[i][j] = strings.get(i).length() <= j ? ' ' : strings.get(i).charAt(j);
             }
         }
-        currentLevel = new Level(level, sizeX, sizeY, length, data);
-        return currentLevel;
+        return new Level(level, sizeX, sizeY, length, data);
     }
 
-    public static Level getCurrentLevel() {
-        return currentLevel;
-    }
 }

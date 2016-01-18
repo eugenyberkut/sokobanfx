@@ -12,12 +12,11 @@ import java.util.List;
 
 /**
  * Created by Yevhen on 09.01.2016.
+ * Sokoban FX example
  */
 public class GameView {
 
     private int CELL_SIZE = 25;
-    private int MAX_WIDTH = 30;
-    private int MAX_HEIGHT = 20;
 
     private final Canvas canvas;
     private final Game game;
@@ -38,18 +37,7 @@ public class GameView {
     }
 
     private void drawField() {
-        //drawGrid();
         drawMaze(game.getMaze());
-    }
-
-    private void drawGrid() {
-        GraphicsContext gc = canvas.getGraphicsContext2D();
-        for (int i = 0; i <= MAX_HEIGHT; i++) {
-            gc.strokeLine(0, i * CELL_SIZE, CELL_SIZE * MAX_WIDTH, i * CELL_SIZE);
-        }
-        for (int i = 0; i <= MAX_WIDTH; i++) {
-            gc.strokeLine(i * CELL_SIZE, 0, i * CELL_SIZE, CELL_SIZE * MAX_HEIGHT);
-        }
     }
 
     private void drawMaze(Maze maze) {

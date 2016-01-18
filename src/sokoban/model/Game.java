@@ -4,7 +4,7 @@ import java.util.logging.Logger;
 
 /**
  * Created by eugeny on 18.01.2016.
- * Sokoban FX demo
+ * Sokoban FX example
  */
 public class Game {
     private int totalLevels = Levels.getTotal();
@@ -38,5 +38,6 @@ public class Game {
     private void nextLevel() {
         level = level.getNext();
         level.buildMaze();
+        Logger.getLogger(this.getClass().getName()).log(java.util.logging.Level.INFO, "level=" + level.getNum() + " length=" + level.getLength());
     }
 }

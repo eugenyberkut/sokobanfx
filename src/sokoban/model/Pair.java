@@ -4,6 +4,7 @@ import java.util.Objects;
 
 /**
  * Created by eugeny on 18.01.2016.
+ * Sokoban FX example
  */
 public class Pair {
     private int row;
@@ -18,16 +19,8 @@ public class Pair {
         return row;
     }
 
-    public void setRow(int row) {
-        this.row = row;
-    }
-
     public int getColumn() {
         return column;
-    }
-
-    public void setColumn(int column) {
-        this.column = column;
     }
 
     @Override

@@ -7,6 +7,7 @@ import java.util.Objects;
 
 /**
  * Created by eugeny on 18.01.2016.
+ * Sokoban FX example
  */
 public abstract class GameObject {
     private Pair position;
@@ -31,14 +32,6 @@ public abstract class GameObject {
 
     public int getColumn() {
         return position.getColumn();
-    }
-
-    public void setRow(int row) {
-        position.setRow(row);
-    }
-
-    public void setColumn(int column) {
-        position.setColumn(column);
     }
 
     public boolean move(Direction dir) {

@@ -36,10 +36,6 @@ public class Level {
     public int getLength() {
         return length;
     }
-//
-//    public char[][] getData() {
-//        return data;
-//    }
 
     public Level getNext() {
         return Levels.getLevel(num + 1);
@@ -68,7 +64,7 @@ public class Level {
                 }
             }
         }
-        maze.setSizes(getSizeX(), getSizeY());
+
         storedMaze = maze;
         return maze;
     }
