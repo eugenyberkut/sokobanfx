@@ -1,5 +1,9 @@
-package sokoban.model;
+package sokoban.model.util;
 
+
+import sokoban.model.items.Box;
+import sokoban.model.items.GameObject;
+import sokoban.model.items.Man;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -7,8 +7,8 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
-import sokoban.model.Direction;
 import sokoban.model.Game;
+import sokoban.model.util.Direction;
 import sokoban.view.GameView;
 
 import java.net.URL;

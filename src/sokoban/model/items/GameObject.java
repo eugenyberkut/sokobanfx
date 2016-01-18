@@ -1,7 +1,9 @@
-package sokoban.model;
+package sokoban.model.items;
 
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
+import sokoban.model.util.Direction;
+import sokoban.model.util.Pair;
 
 import java.util.Objects;
 

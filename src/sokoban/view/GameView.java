@@ -4,9 +4,9 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import sokoban.model.Game;
-import sokoban.model.GameObject;
-import sokoban.model.Man;
-import sokoban.model.Maze;
+import sokoban.model.items.GameObject;
+import sokoban.model.items.Man;
+import sokoban.model.util.Maze;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package sokoban.model;
+package sokoban.model.items;
 
 import javafx.scene.paint.Color;
 

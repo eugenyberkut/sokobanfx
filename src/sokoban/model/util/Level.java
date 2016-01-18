@@ -1,5 +1,10 @@
-package sokoban.model;
+package sokoban.model.util;
 
+
+import sokoban.model.items.Border;
+import sokoban.model.items.Box;
+import sokoban.model.items.Man;
+import sokoban.model.items.Target;
 
 /**
  * Created by Yevhen Berkunskyi on 10.01.2016.

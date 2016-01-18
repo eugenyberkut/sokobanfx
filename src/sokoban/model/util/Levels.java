@@ -1,4 +1,4 @@
-package sokoban.model;
+package sokoban.model.util;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -21,7 +21,7 @@ public class Levels {
     static {
         try {
             lines = Files.newBufferedReader(Paths.get("soko.txt")).lines().collect(toCollection(ArrayList<String>::new));
-            Logger.getLogger(sokoban.model.Levels.class.getName()).log(java.util.logging.Level.INFO, "Ok");
+            Logger.getLogger(Levels.class.getName()).log(java.util.logging.Level.INFO, "Ok");
         } catch (IOException e) {
             e.printStackTrace();
         }

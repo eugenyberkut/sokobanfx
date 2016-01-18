@@ -1,4 +1,4 @@
-package sokoban.model;
+package sokoban.model.util;
 
 /**
  * Created by eugeny on 18.01.2016.

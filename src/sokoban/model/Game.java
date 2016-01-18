@@ -1,5 +1,10 @@
 package sokoban.model;
 
+import sokoban.model.util.Direction;
+import sokoban.model.util.Level;
+import sokoban.model.util.Levels;
+import sokoban.model.util.Maze;
+
 import java.util.logging.Logger;
 
 /**
