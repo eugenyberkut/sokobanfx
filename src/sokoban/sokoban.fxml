@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.canvas.*?>
-<?import java.lang.*?>
+<?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.layout.*?>
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sokoban.controller.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sokoban.controller.Controller">
    <right>
       <Pane prefHeight="400.0" prefWidth="120.0" style="-fx-background-color: WHITESMOKE;" BorderPane.alignment="CENTER" />
    </right>
    <center>
-      <Pane fx:id="pane" prefHeight="400.0" prefWidth="400.0" style="-fx-border-color: BLUE;" BorderPane.alignment="CENTER">
+      <Pane fx:id="pane" prefHeight="600.0" prefWidth="400.0" style="-fx-border-color: BLUE;"
+            BorderPane.alignment="CENTER" onKeyPressed="#processKey" focusTraversable="true">
          <children>
             <Canvas fx:id="canvas" height="400.0" layoutX="0.0" layoutY="0.0" width="400.0" />
          </children>

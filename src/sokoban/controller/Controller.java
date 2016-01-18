@@ -1,14 +1,15 @@
 package sokoban.controller;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
-import sokoban.model.Levels;
+import sokoban.model.Direction;
+import sokoban.model.Game;
 import sokoban.view.GameView;
-
-
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,16 +17,17 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Controller implements Initializable {
-    private int totalLevels = Levels.getTotal();
-    private GameView gv;
 
-    private Logger LOG;
+    private GameView gv;
+    private Game game;
 
     @FXML
     Canvas canvas;
 
     @FXML
     Pane pane;
+
+    Logger LOG;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -37,10 +39,31 @@ public class Controller implements Initializable {
 
         canvas.widthProperty().addListener(evt -> gv.draw());
         canvas.heightProperty().addListener(evt -> gv.draw());
-        LOG.log(Level.INFO, Integer.toString(totalLevels));
-
-        gv = new GameView(canvas);
+        game = new Game();
+        gv = new GameView(canvas, game);
+        pane.requestFocus();
     }
 
 
+    public void processKey(Event event) {
+
+        KeyEvent keyEvent = (KeyEvent) event;
+        KeyCode keyCode = keyEvent.getCode();
+        LOG.log(Level.INFO, String.valueOf(keyCode));
+        switch (keyCode) {
+            case UP:
+                game.move(Direction.UP);
+                break;
+            case DOWN:
+                game.move(Direction.DOWN);
+                break;
+            case LEFT:
+                game.move(Direction.LEFT);
+                break;
+            case RIGHT:
+                game.move(Direction.RIGHT);
+                break;
+        }
+        gv.draw();
+    }
 }

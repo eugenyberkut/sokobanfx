@@ -4,17 +4,17 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Logger;
-import java.util.stream.Stream;
-import static java.util.stream.Collectors.*;
+
+import static java.util.stream.Collectors.toCollection;
 
 /**
  * Created by Yevhen on 09.01.2016.
  */
 public class Levels {
     private static List<String> lines;
+    private static Level currentLevel;
 
     public static List<String> getLines() {
         return lines;
@@ -50,6 +50,11 @@ public class Levels {
                 data[i][j] = strings.get(i).length() <= j ? ' ' : strings.get(i).charAt(j);
             }
         }
-        return new Level(sizeX, sizeY, length, data);
+        currentLevel = new Level(level, sizeX, sizeY, length, data);
+        return currentLevel;
+    }
+
+    public static Level getCurrentLevel() {
+        return currentLevel;
     }
 }
